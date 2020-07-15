@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"strings"
-
-	"github.com/startGo/learngo/something"
 )
 
 func multiply(a, b int) int {
@@ -42,25 +40,43 @@ func canIDrink(age int) bool {
 }
 
 func main() {
-	fmt.Println("Hello World!!")
+	//fmt.Println("Hello World!!")
 
-	var ask string = "go는 어떠니?"
-	say := "go는 정말 신기하다."
+	//var ask string = "go는 어떠니?"
+	//say := "go는 정말 신기하다."
 
-	something.SayAnything(ask)
-	something.SayAnything(say)
-
-	/**/
-	fmt.Println(multiply(2, 3))
-	strLen, strUpper := lenAndUpper("강은호")
-	fmt.Println(strLen, strUpper)
+	//something.SayAnything(ask)
+	//something.SayAnything(say)
 
 	/**/
-	repeatMe("강은호님", "안녕하세요", "즐거운 하루입니다.")
+	//fmt.Println(multiply(2, 3))
+	//strLen, strUpper := lenAndUpper("강은호")
+	//fmt.Println(strLen, strUpper)
+
+	/**/
+	//repeatMe("강은호님", "안녕하세요", "즐거운 하루입니다.")
 
 	/*for test*/
-	fmt.Println(superAdd(1, 2, 3, 4, 5))
+	//fmt.Println(superAdd(1, 2, 3, 4, 5))
 
 	/*if test*/
-	fmt.Println(canIDrink(17))
+	//fmt.Println(canIDrink(17))
+
+	/*pointer test */
+	a := 2
+	b := &a
+	a = 10
+	fmt.Println(a, *b)
+
+	/*arrays test*/
+	name := []string{"aa", "bb", "cc"}
+	name = append(name, "dd")
+	fmt.Println(name)
+
+	/*map Test*/
+	eunho := map[string]string{"name": "kang", "age": "13"}
+	for key, value := range eunho {
+		fmt.Println(key, value)
+	}
+
 }
