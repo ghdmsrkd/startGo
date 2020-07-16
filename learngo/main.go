@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	"github.com/startGo/learngo/accounts"
 )
 
 func multiply(a, b int) int {
@@ -63,20 +65,23 @@ func main() {
 	//fmt.Println(canIDrink(17))
 
 	/*pointer test */
-	a := 2
-	b := &a
-	a = 10
-	fmt.Println(a, *b)
+	//a := 2
+	//b := &a
+	//a = 10
+	//fmt.Println(a, *b)
 
 	/*arrays test*/
-	name := []string{"aa", "bb", "cc"}
-	name = append(name, "dd")
-	fmt.Println(name)
+	//name := []string{"aa", "bb", "cc"}
+	//name = append(name, "dd")
+	//fmt.Println(name)
 
 	/*map Test*/
-	eunho := map[string]string{"name": "kang", "age": "13"}
-	for key, value := range eunho {
-		fmt.Println(key, value)
-	}
+	//eunho := map[string]string{"name": "kang", "age": "13"}
+	//for key, value := range eunho {
+	//fmt.Println(key, value)
+	//}
 
+	account := accounts.NewAccount("kang")
+	account2 := accounts.NewAccount("kim")
+	fmt.Println(account, account2)
 }
