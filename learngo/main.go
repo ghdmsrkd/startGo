@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"strings"
 
 	"github.com/startGo/learngo/accounts"
@@ -83,5 +84,13 @@ func main() {
 
 	account := accounts.NewAccount("kang")
 	account2 := accounts.NewAccount("kim")
+
+	account.Deposit(10)
+	err := account.Withdraw(20)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
 	fmt.Println(account, account2)
+	fmt.Println(account.Balance())
 }
