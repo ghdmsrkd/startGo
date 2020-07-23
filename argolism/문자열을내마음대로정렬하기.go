@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -16,10 +15,12 @@ func solution2(strings []string, n int) []string {
 	return strings
 }
 
+/*
 func main() {
 	list := []string{"sun", "bed", "aar"}
 	fmt.Println(solution2(list, 1))
 }
+*/
 
 /*
 문제 설명
